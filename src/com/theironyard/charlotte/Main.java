@@ -10,21 +10,25 @@ public class Main {
 	    System.out.println("Please enter a number");
         String fizzBuzzTest = inputScanner.nextLine();
         int result = Integer.valueOf(fizzBuzzTest);
-	    fizzBuzz(result);
+	    System.out.println(fizzBuzz(result));
 	    System.out.println(" ");
 	    System.out.println("Please enter how long you would like your sequence.");
 	    int febl = (Integer.valueOf(inputScanner.nextLine()));
 	    fibseq(febl);
     }
 
-    public static void fizzBuzz(int number) {
+    public static String fizzBuzz(int number) {
         if (number % 3 == 0) {
-            System.out.print("Fizz");
-        }
-        if (number % 5 == 0) {
-            System.out.print("Buzz");
-        } else if (number % 3 != 0 && number % 5 != 0){
-            System.out.println(number);
+            if (number % 5 == 0) {
+                return "FizzBuzz";
+            } else {
+                return "Fizz";
+            }
+        } else if (number % 5 == 0) {
+            return "Buzz";
+
+        } else {
+            return String.valueOf(number);
         }
     }
 

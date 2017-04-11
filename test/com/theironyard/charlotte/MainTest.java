@@ -2,6 +2,7 @@ package com.theironyard.charlotte;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -10,9 +11,14 @@ import static org.junit.Assert.assertTrue;
 public class MainTest {
 
     @Test
-    public void testNumber(int x) throws Exception {
+    public void testNumber() throws Exception {
         assertTrue(Main.fizzBuzz(3).equals("Fizz"));
         assertTrue(Main.fizzBuzz(5).equals("Buzz"));
         assertTrue(Main.fizzBuzz(15).equals("FizzBuzz"));
     }
+    public void testFibSec() throws Exception {
+
+        //assertTrue(Main.fibseq(3));
+    }
+
 }

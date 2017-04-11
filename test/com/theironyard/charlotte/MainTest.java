@@ -3,6 +3,7 @@ package com.theironyard.charlotte;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -16,9 +17,10 @@ public class MainTest {
         assertTrue(Main.fizzBuzz(5).equals("Buzz"));
         assertTrue(Main.fizzBuzz(15).equals("FizzBuzz"));
     }
-    public void testFibSec() throws Exception {
 
-        //assertTrue(Main.fibseq(3));
+    @Test
+    public void testFibSec() throws Exception {
+        assertArrayEquals(new Integer[] { 1, 1, 2 }, Main.fibseq(3));
     }
 
 }
